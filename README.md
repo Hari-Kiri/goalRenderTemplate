@@ -1,2 +1,2 @@
 # goalRenderTemplate
-Library for rendering HTML template in Go.
+Go library for rendering HTML template.
