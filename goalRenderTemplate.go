@@ -9,7 +9,7 @@ import (
 )
 
 // HTML renderer
-func Process(htmlTemplates *template.Template, responseWriter http.ResponseWriter, template string, appSettings *applicationSettingsLoader.ApplicationSettings, request *http.Request) {
+func Process(htmlTemplates *template.Template, responseWriter http.ResponseWriter, template string, appSettings *goalApplicationSettingsLoader.ApplicationSettings, request *http.Request) {
 	// Open HTML page
 	error := htmlTemplates.ExecuteTemplate(responseWriter, template+".html", appSettings)
 	log.Println("[info] Serving " + template + " page, requested from " + request.RemoteAddr + " with request url path [" + request.URL.Path + "]")
